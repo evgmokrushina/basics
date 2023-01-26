@@ -1,4 +1,4 @@
-package ru.jenia.ru.jenia.condition;
+package ru.jenia.condition;
 
 public class Point {
     public static double distance(int x1, int y1, int x2, int y2) {
