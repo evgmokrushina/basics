@@ -2,11 +2,9 @@ package ru.jenia.condition;
 
 public class Point {
     public static double distance(int x1, int y1, int x2, int y2) {
-        int x3 = x2 - x1;
-        int y3 = y2 - y1;
-        double first = Math.pow(x3, 2);
-        double second = Math.pow(y3, 2);
-        double addition = first + second;
+        double deltaX = x2 - x1;
+        double deltaY = y2 - y1;
+        double addition = Math.pow(deltaX, 2) + Math.pow(deltaY, 2);
         double rsl = Math.sqrt(addition);
         return rsl;
 
