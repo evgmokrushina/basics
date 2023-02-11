@@ -10,6 +10,7 @@ public class DummyBot {
             } else {
                 rsl = "I don't know. Please, ask another question.";
             }
+
         return rsl;
     }
 
