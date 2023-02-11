@@ -1,6 +1,6 @@
 package ru.jenia.condition;
 
-public class AlertDivByZiro {
+public class AlertDivByZero {
     public static void possibleDiv(int number) {
         if (number == 0) {
             System.out.println("Could not div by 0.");
@@ -11,8 +11,8 @@ public class AlertDivByZiro {
     }
 
     public static void main(String[] args) {
-        AlertDivByZiro.possibleDiv(4);
-        AlertDivByZiro.possibleDiv(0);
-        AlertDivByZiro.possibleDiv(-4);
+        AlertDivByZero.possibleDiv(4);
+        AlertDivByZero.possibleDiv(0);
+        AlertDivByZero.possibleDiv(-4);
     }
 }
