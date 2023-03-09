@@ -3,8 +3,8 @@ package ru.jenia.array;
 public class EndsWith {
     public static boolean endsWith(char[] word, char[] post) {
         boolean result = true;
-        for (int i = post.length - 1; i >= 0; i--) {
-            if (word[word.length - 1 - i] != post[post.length - 1 - i]) {
+        for (int index = 0; index < post.length; index++) {
+            if (word[word.length - 1 - index] != post[post.length - 1 - index]) {
                 result = false;
                 break;
             }
