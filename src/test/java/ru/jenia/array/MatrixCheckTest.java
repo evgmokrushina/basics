@@ -139,4 +139,17 @@ public class MatrixCheckTest {
         boolean result = MatrixCheck.isWin(input);
         assertThat(result).isFalse();
     }
+
+    @Test
+    public void whenThereAreMoreRowsThenColums() {
+        char[][] input = {
+                {' ', ' ', 'X'},
+                {'X', ' ', 'X'},
+                {'X', 'X', ' '},
+                {'X', 'X', 'X'},
+        };
+        int row = 3;
+        boolean result = MatrixCheck.monoHorizontal(input, row);
+        assertThat(result).isTrue();
+    }
 }
