@@ -1,21 +1,22 @@
 package ru.jenia.array;
 
 public class TwoNumberSum {
+
     public static int[] getIndexes(int[] array, int target) {
         int[] result = new int[2];
-        boolean isSolution = false;
+        boolean solution = false;
         for (int i = 0; i < array.length; i++) {
             for (int j = i + 1; j < array.length; j++) {
                 if (array[i] + array[j] == target) {
-                    isSolution = true;
+                    solution = true;
                     result = new int[] {i, j};
                     break;
                 }
             }
-            if (isSolution) {
+            if (solution) {
                 break;
             }
         }
-        return isSolution ? result : new int[0];
+        return solution ? result : new int[0];
     }
 }
