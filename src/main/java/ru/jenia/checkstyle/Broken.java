@@ -1,8 +1,8 @@
 package ru.jenia.checkstyle;
 
 public class Broken {
-    String name;
-    String surname;
+    private String name;
+    private String surname;
     private int sizeOfEmpty = 10;
     public static final String NEW_VALUE = "";
 
