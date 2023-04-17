@@ -1,40 +1,36 @@
 package ru.jenia.condition;
 
+import org.assertj.core.api.AbstractBigDecimalAssert;
 import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class PointTest {
 
     @Test
-    public void when00to20Then2() {
-        int x1 = 0;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
+    public void whenA00toB20Then2() {
+        Point a = new Point(0, 0);
+        Point b = new Point(2, 0);
+        double result = a.distance(b);
         double expected = 2;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    public void when10to20Then1() {
-        int x1 = 1;
-        int y1 = 0;
-        int x2 = 2;
-        int y2 = 0;
+    public void whenA10toB20Then1() {
+        Point a = new Point(1, 0);
+        Point b = new Point(2, 0);
+        double result = a.distance(b);
         double expected = 1;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.01);
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
-    public void when11to22Then1dot4142() {
-        int x1 = 1;
-        int y1 = 1;
-        int x2 = 2;
-        int y2 = 2;
+    public void whenA11toB22Then1dot4142() {
+        Point a = new Point(1, 1);
+        Point b = new Point(2, 2);
+        double result = a.distance(b);
         double expected = 1.4142;
-        double out = Point.distance(x1, y1, x2, y2);
-        Assert.assertEquals(expected, out, 0.0001);
+        Assert.assertEquals(expected, result, 0.0001);
     }
 }
